@@ -7,10 +7,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public string playerName;
-    public InputField inputField;
-
     public static UIManager Instance;
+    public InputField inputField;
+    public string playerName;
 
     private void Awake()
     {
@@ -39,9 +38,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         playerName = inputField.text;
-
         Debug.Log(playerName);
-
         SceneManager.LoadScene(1);
     }
 }
